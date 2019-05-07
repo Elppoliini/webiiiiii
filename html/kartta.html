@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Kartta</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="../javascript/saa.js"></script>
     <link rel="stylesheet" href="../css/tyyli.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+            integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+            crossorigin=""></script>
+
 </head>
 <body>
 <div class="tekstiosio">
@@ -18,22 +27,42 @@
             <li> <a href="tekijat.html"> Tekijät </a></li>
         </ul>
     </nav>
+    <div class="saaSetti">
+        <img class="icon">
+        <p class="lampotila"></p>
+        <p class="saatiedot"></p>
+    </div>
 
-    <h2>Bulevardin sijainti ja opiskelijoiden kantabaari</h2>
-    <tr>
-        <p> Tässä näette kartan Bulevardi 31 ja Boothillin sijainnista. </p>
+    <h2>Metropolian kampusalue Bulevardilla</h2>
 
-    </tr>
+        <p> Karttaan on merkitty Metropolian kampus sekä opiskelijoille tärkeä kantapaikka Boothill. </p>
 
-    <tr>
-        <p>
-            odksfksdod
-            sfdskfodsofkdsofksdfos okksdfk sofks ofksdof ksdofk sdofk sdoks ofkosdkofkookkosd kofd
-            ok dfos d kosdkf sdkofsdokf oksdksd f
-            dsfkosd ofsdkof kodsk okfsdko skodk odsof kod
-        </p>
-    </tr>
+
 </div>
+
+<div id="mapid"></div>
+<script>
+    var map = L.map('mapid').setView([60.16313, 24.93097], 15);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/export/embed.html?bbox=24.891414642333984%2C60.148212917336885%2C24.971752166748047%2C60.17806268027771">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([60.1647085, 24.9334050]).addTo(map)
+        .bindPopup('Boothill<br>')
+        .openPopup();
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/export/embed.html?bbox=24.891414642333984%2C60.148212917336885%2C24.971752166748047%2C60.17806268027771">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([60.16313, 24.93097]).addTo(map)
+        .bindPopup('Metropolia Ammattikorkeakoulu<br>')
+        .openPopup();
+
+
+
+</script>
 
 </body>
 </html>

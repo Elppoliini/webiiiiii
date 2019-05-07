@@ -1,0 +1,108 @@
+body{
+    background-image: url('../img/IMG_20190423_164143 (1).png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    padding: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: Arial, Calibri, sans-serif;
+}
+
+h1{
+    color: darkslategray;
+    font-size: 40px;
+}
+
+h2{
+    text-decoration: underline;
+    font-size: 18px;
+    border: 2px dotted #c7b16d;
+}
+.saaSetti {
+    text-align: center;
+}
+img .icon {
+    size: 1000px;
+    margin: 0;
+    max-width: 500px;
+}
+.saatiedot {
+    margin: 0;
+    font-size: 18px;
+}
+
+.lampotila {
+    margin: 0;
+    font-size: 18px;
+}
+
+.tekstiosio{
+    background: white;
+    margin: 30px;
+    padding: 15px;
+    opacity: 0.8;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    overflow: hidden;
+    display: inline-block;
+}
+
+nav li{
+    float: left;
+    margin: 0;
+}
+
+nav a{
+    display: block;
+    padding: 20px;
+    color: lightgrey;
+}
+
+nav a:hover {
+    background-color: #c7b16d;
+}
+
+img .henkilokuva{
+    float: left;
+    max-width: 600px;
+}
+
+.column{
+    float: left;
+    width: 50%;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+video {
+    width: 80%;
+    height: auto;
+}
+
+iframe{
+    width: 425px;
+    height:350px;
+}
+#mapid{
+    height: 300px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+var teksti {
+    text: bold;
+}
+
